@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基督教信义会南山堂 - LCM-Nang Sang Lutheran Church</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for clean typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon from original site -->
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
+    <style>
+        /* Use the Inter font family defined above */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Simple scroll animation */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5 flex items-center space-x-3">
+                    <img class="h-12 w-auto" src="assets/images/Logo.png" alt="教会标志">
+                    <span class="font-bold text-lg text-stone-700">基督教信义会南山堂</span>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" id="mobile-menu-button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-stone-700">
+                    <span class="sr-only">打开主菜单</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-12">
+                <a href="#home" class="text-sm font-semibold leading-6 text-stone-900 hover:text-amber-600 transition-colors">主页</a>
+                <a href="#activities" class="text-sm font-semibold leading-6 text-stone-900 hover:text-amber-600 transition-colors">聚会时间</a>
+                <a href="#announcements" class="text-sm font-semibold leading-6 text-stone-900 hover:text-amber-600 transition-colors">最新消息</a>
+                <a href="#contact" class="text-sm font-semibold leading-6 text-stone-900 hover:text-amber-600 transition-colors">联系我们</a>
+            </div>
+        </nav>
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden hidden" id="mobile-menu" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-50"></div>
+            <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-stone-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">基督教信义会南山堂</span>
+                        <img class="h-8 w-auto" src="assets/images/Logo.png" alt="">
+                    </a>
+                    <button type="button" id="close-mobile-menu-button" class="-m-2.5 rounded-md p-2.5 text-stone-700">
+                        <span class="sr-only">关闭菜单</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-stone-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#home" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50">主页</a>
+                            <a href="#activities" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50">聚会时间</a>
+                            <a href="#announcements" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50">最新消息</a>
+                            <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-stone-900 hover:bg-stone-50">联系我们</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative">
+            <div aria-hidden="true" class="absolute inset-0">
+                <img src="assets/images/worship-service.jpeg" alt="教会背景" class="h-full w-full object-cover object-center">
+            </div>
+            <div aria-hidden="true" class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-48 lg:px-8">
+                <h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">在基督里有无限的可能</h1>
+                <p class="mt-4 text-xl text-white">欢迎来到南山堂，一个充满爱与恩典的家。我们诚挚地邀请您加入我们。</p>
+                <a href="#activities" class="mt-8 inline-block rounded-md border border-transparent bg-amber-500 px-8 py-3 text-base font-medium text-white hover:bg-amber-600 transition-colors">查看聚会时间</a>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="bg-white py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-base font-semibold leading-7 text-amber-600">欢迎加入我们</h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">我们的常规聚会</p>
+                    <p class="mt-6 text-lg leading-8 text-stone-600">无论您是初次接触信仰，还是希望寻找一个属灵的家，我们都欢迎您的到来。</p>
+                </div>
+                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                    <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                        <!-- Worship Service -->
+                        <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-stone-50 transition-colors">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m-6-9h12" />
+                                </svg>
+                            </div>
+                            <dt class="mt-4 font-semibold text-stone-900 text-lg">主日崇拜</dt>
+                            <dd class="mt-2 leading-7 text-stone-600">每周六 晚上7:30</dd>
+                            <a href="https://maps.app.goo.gl/DyQbkjMqzt9tknoS9" target="_blank" class="mt-4 inline-block rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-200 transition-colors">聚会地点</a>
+                        </div>
+                        <!-- Prayer Meeting -->
+                        <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-stone-50 transition-colors">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500 text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                                </svg>
+                            </div>
+                            <dt class="mt-4 font-semibold text-stone-900 text-lg">祷告会</dt>
+                            <dd class="mt-2 leading-7 text-stone-600">每月第一个周五</dd>
+                             <a href="https://maps.app.goo.gl/DyQbkjMqzt9tknoS9" target="_blank" class="mt-4 inline-block rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-200 transition-colors">聚会地点</a>
+                        </div>
+                        <!-- Small Group -->
+                        <div class="flex flex-col items-center text-center p-6 rounded-lg hover:bg-stone-50 transition-colors">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-amber-500 text-white">
+                                <!-- UPDATED ICON: Home for Cell Group -->
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a.75.75 0 011.06 0l8.955 8.955a.75.75 0 01-1.06 1.06l-1.06-1.06v6.562a.75.75 0 01-.75.75H4.5a.75.75 0 01-.75-.75V12.56l-1.06 1.06a.75.75 0 01-1.06-1.06z" />
+                                </svg>
+                            </div>
+                            <dt class="mt-4 font-semibold text-stone-900 text-lg">小组</dt>
+                            <dd class="mt-2 leading-7 text-stone-600">每月第三个周五</dd>
+                             <a href="https://maps.app.goo.gl/DyQbkjMqzt9tknoS9" target="_blank" class="mt-4 inline-block rounded-md bg-stone-100 px-4 py-2 text-sm font-medium text-stone-700 hover:bg-stone-200 transition-colors">聚会地点</a>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements Section -->
+        <section id="announcements" class="py-24 sm:py-32">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-stone-900 sm:text-4xl">最新消息与报告</h2>
+                    <p class="mt-4 text-lg leading-8 text-stone-600">了解教会的最新动态和重要通知。</p>
+                </div>
+                <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+                    <article class="relative isolate flex flex-col rounded-2xl bg-white p-8 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-stone-500">
+                            <time datetime="2025-07-12" class="mr-8">2025年7月12日</time>
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-stone-900">
+                            <a href="cpf.html">
+                                <span class="absolute inset-0"></span>
+                                南山堂植堂账目报表
+                            </a>
+                        </h3>
+                        <p class="mt-4 text-sm leading-6 text-stone-600">点击查看最新的植堂账目报表详情。</p>
+                    </article>
+                    <article class="relative isolate flex flex-col rounded-2xl bg-white p-8 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="flex flex-wrap items-center gap-y-1 text-sm leading-6 text-stone-500">
+                            <time datetime="2024-04-14" class="mr-8">2024年4月14日</time>
+                        </div>
+                        <h3 class="mt-3 text-lg font-semibold leading-6 text-stone-900">
+                            <a href="dedication.html">
+                                <span class="absolute inset-0"></span>
+                                马来西亚基督教信义会南山堂献堂礼
+                            </a>
+                        </h3>
+                        <p class="mt-4 text-sm leading-6 text-stone-600">回顾我们献堂礼的宝贵时刻和信息。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white relative">
+            <div class="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32">
+                <div class="px-6 lg:px-8">
+                    <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+                        <h2 class="text-3xl font-bold tracking-tight text-stone-900">联系我们</h2>
+                        <p class="mt-2 text-lg leading-8 text-stone-600">我们期待您的来访或来电。若有任何疑问，请随时与我们联系。</p>
+                        <dl class="mt-10 space-y-8 text-base leading-7 text-stone-600">
+                            <div class="flex gap-x-4">
+                                <dt class="flex-none">
+                                    <span class="sr-only">地址</span>
+                                    <svg class="h-7 w-6 text-stone-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                                    </svg>
+                                </dt>
+                                <dd>1st Floor, 53, Lorong Ulu Sungai Merah 35B2,<br>96000 Sibu, Sarawak</dd>
+                            </div>
+                            <div class="flex gap-x-4">
+                                <dt class="flex-none">
+                                    <span class="sr-only">WhatsApp</span>
+                                    <svg class="h-7 w-6 text-stone-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                                    </svg>
+                                </dt>
+                                <dd><a class="hover:text-stone-900" href="https://wa.me/60163684188" target="_blank" rel="noopener noreferrer"> +60 16-368 4188</a></dd>
+                            </div>
+                            <div class="flex gap-x-4">
+                                <dt class="flex-none">
+                                    <span class="sr-only">主任牧师</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-stone-400">
+                                      <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+                                    </svg>
+                                </dt>
+                                <dd><a class="hover:text-stone-900" href="https://linktr.ee/elijah.tingmk" target="_blank" rel="noopener noreferrer">陈梅钦牧师 (Elijah Ting)</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">页脚</h2>
+        <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+            <div class="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+                <p class="text-xs leading-5 text-stone-400">&copy; 2024 基督教信义会南山堂. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
